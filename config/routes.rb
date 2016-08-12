@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  get 'health/index'
+  root 'login#index'
+
+  #resources :todos
+  #root 'todos#index'
+  #get 'health/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

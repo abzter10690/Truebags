@@ -5,10 +5,21 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style media="screen">
+  body {
+    background-image: url("/images/landingPageBackground.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size:100% 100% ;
+  }
+  .navbar-inner {
+    background:transparent;
+  }
+  </style>
+
 </head>
 <body>
-
-<%= yield %>
-
+    <%= yield %>
 </body>
 </html>

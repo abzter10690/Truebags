@@ -1,0 +1,88 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="glyphicon glyphicon-user"></span>
+        </button>
+        <a class="navbar-brand" href="#" id="brandName">Raleigh Jamaat</a>
+      </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <form class="navbar-form navbar-right" role="form" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter ITS ID">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" placeholder="Enter Password">
+          </div>
+          <button type="submit" class="btn btn-default" id="loginButton">Sign In</button>
+        </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-sm-4 col-xs-12" id="col1">
+      <div class="panel panel-default">
+        <div class="panel-heading">Upcoming Miqaat <span class="badge"> 16 people attending</span></div>
+          <div class="panel-body">
+            <p>
+              <h2>Ramadan
+                <button class="btn btn-primary" type="button">
+                    Register
+                </button></p>
+              </h2>
+            <p> <span class="label label-info">Date</span>&nbsp;&nbsp;12th Ramadan , 15th June 2016</p>
+            <p><span class="label label-info">Venue</span>&nbsp;&nbsp;6221, Yates Mill Road , Raleigh , NC-27606</p>
+            <p><span class="label label-info">Timings</span>&nbsp;&nbsp;7.30 pm - 10.00 pm</p>
+            <p><span class="label label-info">Special Instructions</span>&nbsp;&nbsp;Bring Quran Mazid for Tilawat</p>
+            <div class="container" id="map" style="width:100% ;height:360px"></div>
+          </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-4 col-xs-12" id="col1">
+      <div class="panel panel-default">
+        <div class="panel-heading">Namaaz Timings</div>
+          <div class="panel-body">
+            <p><span class="label label-warning">Sihori End</span>&nbsp;&nbsp;4:43 AM</p>
+            <p><span class="label label-warning">Fajr</span>&nbsp;&nbsp;4:43 AM</p>
+            <p><span class="label label-warning">Fajr End / Sunrise</span>&nbsp;&nbsp;4:43 AM</p>
+            <p><span class="label label-warning">Zawaal</span>&nbsp;&nbsp;4:43 AM</p>
+            <p><span class="label label-warning">Zuhr</span>&nbsp;&nbsp;4:43 AM</p>
+            <p><span class="label label-warning">Asar</span>&nbsp;&nbsp;4:43 AM</p>
+            <p><span class="label label-warning">Magrib</span>&nbsp;&nbsp;4:43 AM</p>
+            </div>
+          </div>
+      </div>
+    <div class="col-lg-4 col-sm-4 col-xs-12" id="col2">
+      <div class="panel panel-default">
+        <div class="panel-heading">Hadith of the Day</div>
+          <div class="panel-body">
+            blah blah blah</div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var position = {lat: 35.74355, lng: -78.7350967};
+        var map = new google.maps.Map(mapDiv, {
+          center: position,
+          zoom: 14
+        });
+        var marker = new google.maps.Marker({
+          position: position,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer>
+</script>
